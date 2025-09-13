@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body>
+    
   <%- include('../partials/_navbar.ejs') %>
+  <div class="edit-body">
   <h1>Edit <%= application.title %> at <%= application.company %></h1>
   <form
     action="/users/<%= user._id %>/applications/<%= application._id %>?_method=PUT"
@@ -66,5 +68,6 @@
     </select>
     <button type="submit">Update Application</button>
   </form>
+    </div>
 </body>
 </html>
